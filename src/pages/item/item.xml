@@ -1,0 +1,153 @@
+<import src="../wxParse/wxParse"/>
+<import src="../common/header"/>
+<import src="../common/footer"/>
+<view class="page">
+    <template is="header" data="{{ citys, currentCity }}"/>
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="355" height="150"/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+
+    <view class="mod-final">
+        <view class="box box-rmd">
+            <ul class="plist-matter">
+                <li>
+                    <p class="detail">
+                                    <span class="c1">
+                                        <span class="tip">
+                                            <span class="tip-con2">免</span>
+                                            <span class="tip-con1">送</span>
+                                            <span class="tip-con1">折</span>
+                                        </span>
+                                        <span class="tit">炫境世界（福州鼓楼）</span>
+                                    </span>
+                                    <span class="c2">
+
+                                            <span class="star"><span class="star-in" style="width:60.0%"></span></span>
+                                            <span class="t1">3.0</span>
+
+
+                                            <span class="t2">人均消费30元</span>
+
+
+                                    </span>
+
+
+                        <span class="t3" bindtap="mapTap"><i class="ico-address"></i>福州市五一北路126号新华书店3层</span>
+
+
+
+
+                        <span class="t3" bindtap="telTap"><i class="ico-phone"></i>13799417977</span>
+
+
+                    </p>
+                </li>
+            </ul>
+        </view>
+        <view class="box box-info">
+            <view class="txt">
+
+                <text>营业时间：周一至周天 09:00 - 21:00</text>
+                <text>商家服务：
+                    免预约;
+                    提供免费WIFI;
+                </text>
+            </view>
+
+            <ul class="list-info">
+
+                <!--1、免费体验 2、优惠折扣 3、到店有礼-->
+                <li>
+                    <div class="c1">免费体验</div>
+                    <view class="c2">
+                        <view>市场价100元 17173网友免费体验 数量：100</view>
+                        <view>报名时间：2016.10.17 - 2016.10.24</view>
+                        <view>体验截止时间：2016.12.29</view>
+                    </view>
+                </li>
+
+                <!--1、免费体验 2、优惠折扣 3、到店有礼-->
+                <li>
+                    <div class="c1">折扣优惠</div>
+                    <view class="c2">
+                        <view>市场价100元 17173网友价100元 数量：200</view>
+                        <view>报名时间：2016.10.17 - 2016.10.24</view>
+                        <view>体验截止时间：2016.12.29</view>
+
+                    </view>
+                </li>
+
+                <!--1、免费体验 2、优惠折扣 3、到店有礼-->
+                <li>
+                    <div class="c1">到店送礼</div>
+                    <view class="c2">
+                        <view>17173网友消费100元 赠送暴风魔镜 数量：300</view>
+                        <view>报名时间：2016.10.17 - 2016.10.24</view>
+                        <view>体验截止时间：2016.12.29</view>
+                    </view>
+                </li>
+
+            </ul>
+
+        </view>
+        <view class="box box-intro">
+            <view class="box-hd">
+                <text class="tit">门店与产品服务介绍</text>
+            </view>
+            <view class="box-bd">
+                <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+        </view>
+
+        <view class="box box-intro">
+            <view class="box-hd">
+                <view class="tit">免费体验活动规则</view>
+            </view>
+            <view class="box-bd txt">
+                <text>1.筛选用户旨在挑选出熟悉本类产品，能全面、准确反映产品优缺点的用户</text>
+                <text>2.同类产品30天之内用户不得再次中签 众测君将根据值友在我站的投稿（非匿名）来判断专业度</text>
+                <text>3.众测计划也是众测君参考的重要因素，值友还可以将自己众测该产品的优势写在这里</text>
+            </view>
+        </view>
+
+        <view class="box box-intro">
+            <view class="box-hd">
+                <view class="tit">优惠折扣活动规则</view>
+            </view>
+            <view class="box-bd txt">
+                <text>1.筛选用户旨在挑选出熟悉本类产品，能全面、准确反映产品优缺点的用户</text>
+                <text>2.同类产品30天之内用户不得再次中签 众测君将根据值友在我站的投稿（非匿名）来判断专业度</text>
+                <text>3.众测计划也是众测君参考的重要因素，值友还可以将自己众测该产品的优势写在这里</text>
+            </view>
+        </view>
+
+        <view class="box box-intro">
+            <view class="box-hd">
+                <view class="tit">到店有礼活动规则</view>
+            </view>
+            <view class="box-bd txt">
+                <text>1.筛选用户旨在挑选出熟悉本类产品，能全面、准确反映产品优缺点的用户</text>
+                <text>2.同类产品30天之内用户不得再次中签 众测君将根据值友在我站的投稿（非匿名）来判断专业度</text>
+                <text>3.众测计划也是众测君参考的重要因素，值友还可以将自己众测该产品的优势写在这里</text>
+            </view>
+        </view>
+
+    </view>
+    <template is="footer"/>
+</view>
+<view class="bar-final-act">
+    <view class="bar-in">
+        <view bindtap="shareTap" class="btn-share" data-role="shareBtn"><i class="ico-share"></i></view>
+        <view href="#comment" class="btn-comment"><i class="ico-comment-l"></i><span class="comment-count" id="changyan_count_unit">0</span>个评论</view>
+
+        <view bindtap="joinTap" class="btn-join" data-role="joinBtn">立即参与</view>
+
+    </view>
+</view>
+<view class="btn-gotop"></view>

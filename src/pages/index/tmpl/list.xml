@@ -1,0 +1,46 @@
+<template name="vr-list">
+    <scroll-view scroll-y="true" class="list" bindscrolltolower="handleLoadMore">
+        <ul class="plist-matter">
+            <template is="{{'item'}}" data="{{ item }}" wx:for="{{ listData }}" wx:for-index="idx" wx:key="{{ item.id }}"/>
+        </ul>
+        <view class="loading" wx:if="{{ hasMore }}"><a href="javascript:;"> 加载中</a><i class="ribbon-loading"></i></view>
+        <view class="loading" wx:else><a href="javascript:;"> 没有更多了</a></view>
+
+        <view class="result-none" hidden="{{ listData.length }}">
+            <view><image src="http://ue.17173cdn.com/a/vr/ty/2017/v1.1.1/m/img/none.png" class="img"></image></view>
+            <text>抱歉，没有找到对应的门店！</text>
+        </view>
+    </scroll-view>
+</template>
+
+
+<template name="item">
+    <li data-id="{{item.id}}" data-topicId="{{item.commentPrefix}}{{item.id}}">
+        <navigator url="../item/item?storeId={{item.id}}" class="art-item">
+            <view class="pic">
+                <view class="img">
+                    <image class="lazy" src="{{item.imageUrl}}" alt="{{item.name}}" />
+                </view>
+                <i class="ico-rmd"></i>
+                <p><span class="star"><span class="star-in" style="width:{{item.levelPercent}}%"></span></span><span class="t1">{{item.level}}</span></p>
+            </view>
+            <view class="detail">
+								<span class="c1">
+									<span class="tip">
+										<span class="tip-con2" wx:if="{{item.type1}}">免</span>
+										<span class="tip-con1" wx:if="{{item.type3}}">送</span>
+										<span class="tip-con1" wx:if="{{item.type2}}">折</span>
+									</span>
+									<text class="tit">{{item.name}}</text>
+								</span>
+								<span class="c2">
+                                    <text class="t2">人均消费{{item.price}}元</text>
+								</span>
+								<span class="c3">
+									<text class="t3"><i class="ico-interest"></i>{{item.uv}}人感兴趣</text>
+									<text class="t3"><i class="ico-comment"></i><span class="js-cv">0</span>个评论</text>
+								</span>
+            </view>
+        </navigator>
+    </li>
+</template>

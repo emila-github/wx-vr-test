@@ -1,0 +1,51 @@
+<template name="vr-dropdown">
+    <view class="mod-matter">
+        <view class="dropdown-matter">
+            <ul class="list-top">
+                <li class="item {{showfilterindex==1?'active':''}}"  bindtap="setFilterPanel" data-index="1">
+                    <text class="con">综合排序</text>
+                </li>
+                <li class="item {{showfilterindex==2?'active':''}}"  bindtap="setFilterPanel" data-index="2">
+                    <text class="con">活动类型</text>
+                </li>
+                <li class="item {{showfilterindex==3?'active':''}}"  bindtap="setFilterPanel" data-index="3">
+                    <text class="con">游戏类型</text>
+                </li>
+            </ul>
+            <view class="dropdown-matter-pop" wx:if="{{showfilter}}">
+                <ul class="list-dropdown js-list-sort"  wx:if="{{showfilterindex==1}}" style="flex-direction: column;">
+                    <li class="{{showFilterSubSortIndex=='price'?'active':''}}">
+                        <text data-id="price" bindtap="setFilterPanelSubSort" class="sub-item con">价格最低</text>
+                    </li>
+                    <li class="{{showFilterSubSortIndex=='uv'?'active':''}}">
+                        <text data-id="uv" bindtap="setFilterPanelSubSort" class="sub-item con">人气最高</text>
+                    </li>
+                    <li class="{{showFilterSubSortIndex=='level'?'active':''}}">
+                        <text data-id="level" bindtap="setFilterPanelSubSort" class="sub-item con">评分最高</text>
+                    </li>
+                </ul>
+                <ul class="list-dropdown js-list-activetype"  wx:if="{{showfilterindex==2}}"  style="flex-direction: column;">
+                    <li class="{{showFilterSubActivetypesFlag['1']?'active':''}}">
+                        <text data-id="1" bindtap="setFilterPanelSubActivetype" class="sub-item con">免费体验</text>
+                    </li>
+                    <li class="{{showFilterSubActivetypesFlag['2']?'active':''}}">
+                        <text data-id="2" bindtap="setFilterPanelSubActivetype"  class="sub-item con">折扣优惠</text>
+                    </li>
+                    <li class="{{showFilterSubActivetypesFlag['3']?'active':''}}">
+                        <text data-id="3" bindtap="setFilterPanelSubActivetype"  class="sub-item con">到店有礼</text>
+                    </li>
+                </ul>
+                <ul class="list-dropdown js-list-fliter"  wx:if="{{showfilterindex==3}}">
+                    <li class="{{showFilterSubGametypesAll?'active':''}}">
+                        <text data-id="" bindtap="setFilterPanelSubGametypesAll" class="sub-item con">全部</text>
+                    </li>
+                    <block wx:for="{{gametypes}}" wx:for-index="idx">
+                        <li class="{{showFilterSubGametypesFlag[item.id]?'active':''}}">
+                            <text data-id="{{item.id}}" bindtap="setFilterPanelSubGametypes" class="sub-item con">{{item.name}}</text>
+                        </li>
+                    </block>
+                </ul>
+            </view>
+        </view>
+    </view>
+</template>

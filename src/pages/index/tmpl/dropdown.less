@@ -1,0 +1,85 @@
+.mod-matter .dropdown-matter {
+    position: relative;
+    height: 2.75rem;
+    border-bottom: 1px solid #f5f5f5; }
+.mod-matter .dropdown-matter .list-top {
+    width: 100%; display: flex;}
+.mod-matter .dropdown-matter .list-top li {
+    /*float: left;*/
+    /*width: 33.3%;*/
+    flex: 1;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 0; }
+.mod-matter .dropdown-matter .list-top .con {
+    display: inline-block;
+    font-size: .9375rem;
+    line-height: 3;
+    height: 2.75rem;
+    padding: 0 2px; }
+.mod-matter .dropdown-matter .list-top .con::after {
+    content: '';
+    height: 0;
+    width: 0;
+    display: inline-block;
+    border: 4px transparent solid;
+    border-top-width: 0;
+    border-bottom-color: #999;
+    margin-left: -2px;
+    margin-top: -2px;
+    vertical-align: middle;
+    margin-left: .5rem; }
+.mod-matter .dropdown-matter .list-top .active {
+    background-color: #eee; }
+.mod-matter .dropdown-matter .list-top .active .con {
+    position: relative;
+    font-weight: 500;
+    color: #333; }
+.mod-matter .dropdown-matter .list-top .active .con::after {
+    border-top-color: #333;
+    border-bottom-color: transparent;
+    border-bottom-width: 0;
+    border-top-width: 4px; }
+.mod-matter .dropdown-matter .dropdown-matter-pop {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 2.75rem;
+    z-index: 10;
+    background: #eee;
+    padding: .625rem 0 .25rem 0;
+    /*padding: .625rem .3125rem .25rem .3125rem;*/
+    /*display: none;*/
+}
+.mod-matter .dropdown-matter .list-dropdown {
+    overflow: hidden; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.mod-matter .dropdown-matter .list-dropdown li {
+    /*float: left;*/
+    flex: 1;
+    min-width: 230rpx;
+    text-align: center;
+    /*width: 25%;*/
+    padding: 0 .3125rem .375rem .3125rem;
+    box-sizing: border-box; }
+.mod-matter .dropdown-matter .list-dropdown .sub-item {
+    display: block;
+    font-size: .875rem;
+    line-height: 2.15;
+    text-align: center; }
+.mod-matter .dropdown-matter .list-dropdown .active .sub-item  {
+    background: #55e1d2;
+    color: #fff; }
+
+.mod-matter .dropdown-matter-active .btn-dropdown::before {
+    border: 4px transparent solid;
+    border-top-width: 0;
+    border-bottom-color: #333; }
+
+.mod-matter .dropdown-matter-fixed {
+    position: fixed;
+    z-index: 800;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff; }

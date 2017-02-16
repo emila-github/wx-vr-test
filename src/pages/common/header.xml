@@ -1,0 +1,17 @@
+<template name="header">
+    <view class="header">
+        <navigator class="gb-topbar-logo" url="vrlist/vrlist">
+            <image src="http://ue1.17173cdn.com/a/vr/xx/2016/m/img/logo.png"></image>
+        </navigator>
+        <!--<navigator class="gb-topbar-city" url="vrlist/vrlist">-->
+            <!--福州-->
+        <!--</navigator>-->
+        <view class="gb-topbar-city">
+            <picker bindchange="bindPickerChange" value="{{currentCity.code}}" range="{{citys}}" range-key="name">
+                <view class="picker">
+                    当前选择：{{currentCity.name}}
+                </view>
+            </picker>
+        </view>
+    </view>
+</template>

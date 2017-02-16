@@ -1,0 +1,19 @@
+<import src="tmpl/dropdown"/>
+<import src="tmpl/list"/>
+<import src="../common/header"/>
+<import src="../common/footer"/>
+<view class="page">
+    <template is="header" data="{{ citys, currentCity }}"/>
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="355" height="150"/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <template is="vr-dropdown" data="{{ showFilterSubGametypesAll, gametypes, showfilter, showfilterindex, showfilterindex, showFilterSubSortIndex, showFilterSubActivetypesFlag, showFilterSubGametypesIndex, showFilterSubGametypesAll, showFilterSubGametypesFlag }}"/>
+    <template is="vr-list" data="{{ listData, loading, hasMore }}"/>
+    <template is="footer"/>
+</view>

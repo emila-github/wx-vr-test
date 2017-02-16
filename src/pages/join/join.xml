@@ -1,0 +1,67 @@
+<import src="../common/footer"/>
+<view class="page">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="mod-join-act">
+
+            <view class="question">
+                <text class="tit">请选择您要参与的活动:</text>
+                <checkbox-group bindchange="checkboxChange" class="active-list" name="activeId">
+                    <label class="checkbox" wx:for="{{actives}}">
+                        <checkbox value="{{item.id}}" checked="{{item.checked}}"/>{{item.name}}
+                        <block wx:if="{{item.checked}}">（您已参与过）</block>
+                    </label>
+                </checkbox-group>
+            </view>
+
+            <view class="form-group">
+                <text class="txt">姓名</text>
+                <view class="form-in">
+                    <view class="form-txt">玩家姓名</view>
+                    <view class="form-text">
+                        <input placeholder="请输入玩家姓名" name="name" type="text" maxlength="20" value=""/>
+                    </view>
+
+                </view>
+            </view>
+            <view class="form-group">
+                <text class="txt">手机</text>
+                <view class="form-in">
+                    <view class="form-txt">13400000000</view>
+                    <view class="form-text">
+                        <input placeholder="请输入手机号码" name="phone" type="tel" maxlength="13" value="13400000000"/>
+                    </view>
+                </view>
+            </view>
+            <div class="form-group">
+                <text class="txt">QQ</text>
+                <view class="form-in">
+                    <view class="form-txt">123456</view>
+                    <view class="form-text">
+                        <input placeholder="请输入QQ号码" name="qq" type="number" maxlength="20" value="123456"/>
+                    </view>
+                </view>
+            </div>
+            <view class="form-group">
+                <text class="txt">理由</text>
+                <view class="form-in">
+
+                    <view class="form-text form-ta">
+                        <textarea name="reason" placeholder="世界那么大，我想去看看！" maxlength="500"
+                                  value="申请原因申请原因申请原因申请原因申请原因申请原因申请原因申请原因申请原因申请原因申请原因"></textarea>
+                    </view>
+                </view>
+            </view>
+            <view class="statement">
+                <checkbox-group name="protocol">
+                    <label><checkbox value="1" checked="checkbox"/>我已同意并阅读了
+                    </label>
+                </checkbox-group>
+                <navigator url="http://news.17173.com/content/11112016/110015541_1.shtml" class="link">17173VR联盟免责声明
+                </navigator>
+            </view>
+            <button formType="submit" class="btn-submit js-submit-btn">提交</button>
+            <button formType="reset" class="btn-submit js-submit-btn">重置</button>
+        </view>
+    </form>
+    <template is="footer"/>
+</view>

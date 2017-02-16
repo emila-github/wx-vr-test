@@ -1,0 +1,182 @@
+.tip {
+    overflow: hidden; }
+.tip [class^="tip-con"] {
+    float: left;
+    display: block;
+    color: #08cdb7;
+    font-size: .625rem;
+    border: 1px solid #08cdb7;
+    border-radius: 2px;
+    padding: 0 .125rem;
+    margin-left: .25rem;
+    white-space: nowrap; }
+.tip .tip-con2 {
+    background: #08cdb7;
+    color: #fff; }
+
+.star, .star-in {
+    background: url(http://ue.17173cdn.com/a/vr/xx/2016/m/img/star.png) no-repeat;
+    background-size: 55px 30px;
+    width: 55px;
+    height: 10px; }
+
+.star {
+    position: relative;
+    display: inline-block; }
+
+.star-in {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: 0 -15px; }
+.list{
+    /*height: 600px;*/
+    height: 100vh;
+    overflow: hidden;
+}
+.plist-matter {display: flex; flex-direction: column;}
+.plist-matter li {
+    border-bottom: 1px solid #ececec;
+    font-size: .625rem;
+    line-height: 1.5; }
+
+.plist-matter .art-item {
+    display: flex;
+    padding: .9375rem .625rem;
+    overflow: hidden; }
+
+.plist-matter .pic {
+    flex: 1;
+    margin-right: 10px;
+    max-width: 110px;
+    min-width: 110px;
+    position: relative;
+    overflow: hidden;
+    /*background-color: #FFF;*/
+}
+
+.plist-matter .img {
+    position: relative;
+    padding-top: 47.72%;
+    overflow: hidden; }
+.plist-matter .img image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important; }
+
+.plist-matter .ico-rmd {
+    position: absolute;
+    left: 0;
+    top: 0; }
+
+.plist-matter .detail {
+    overflow: hidden; }
+
+.plist-matter .c1, .plist-matter .tip, .plist-matter .tit, .plist-matter .c2, .plist-matter .c3 {
+    display: block; }
+
+.plist-matter .c1 {
+    overflow: hidden; }
+
+.plist-matter .tip {
+    float: right; }
+.plist-matter .tip [class^="tip-con"] {
+    height: 1.5em;
+    box-sizing: border-box;
+    margin-top: .3em; }
+
+.plist-matter .tit {
+    overflow: hidden;
+    font-size: .875rem; }
+
+.plist-matter .c2 {
+    font-size: 0; }
+
+.plist-matter .star {
+    vertical-align: middle; }
+
+.plist-matter .t1, .plist-matter .t2, .plist-matter .t3 {
+    font-size: .75rem;
+    display: inline-block;
+    vertical-align: middle; }
+
+.plist-matter .t1 {
+    margin-left: 3px;
+    font-size: .75rem; }
+
+.plist-matter .t2 {
+    color: #ff6000;
+    line-height: 1.7; }
+
+.plist-matter .t3 {
+    color: #666;
+    margin-right: .625rem; }
+
+.plist-matter .c3 {
+    font-size: 0; }
+
+
+
+@keyframes load {
+    0%,
+    80%,
+    to {
+        height: 6px;
+        box-shadow: 0 0 #55e1d2; }
+    40% {
+        height: 10px;
+        box-shadow: 0 -4px #55e1d2; } }
+
+.loading {
+    width: 100%;
+    line-height: 3.5;
+    text-align: center;
+    display: block;
+    color: #888;
+    font-size: .875rem; }
+
+.ribbon-loading,
+.ribbon-loading::after,
+.ribbon-loading::before {
+    width: 3px;
+    height: 6px;
+    background: #55e1d2;
+    animation: load 1s infinite ease-in-out;
+    border-radius: 50%; }
+
+.ribbon-loading::after,
+.ribbon-loading::before {
+    content: '';
+    position: absolute;
+    top: 0; }
+
+.ribbon-loading {
+    position: relative;
+    display: inline-block;
+    animation-delay: -.16s;
+    margin-left: .5rem; }
+
+.ribbon-loading::after {
+    left: -5px;
+    animation-delay: -.32s; }
+
+.ribbon-loading::before {
+    right: -6px; }
+
+
+
+.result-none {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+    color: #999;
+    font-size: .875rem;
+    padding-top: 2rem; }
+.result-none image {
+    width: 3.125rem;
+    height: 3.125rem;
+    justify-content:center;
+    margin-bottom: 1rem; }
